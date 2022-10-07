@@ -5,7 +5,7 @@
     <style>
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(7, 1fr);
+            grid-template-columns: repeat(12, 1fr);
             grid-auto-rows: 100px;
             padding: 10px;
             padding: 0 20% 0 20%;
@@ -28,41 +28,43 @@
         }
         
         #itemH {
-            grid-column-start: 6;
-            grid-column-end: 8;
+            grid-column-start: 1;
             grid-row-start: 1;
-        }
-        #itemF {
-            grid-column-start: 6;
-            grid-column-end: 8;
-            grid-row-start: 2;
+            grid-row-end: 9;
         }
         #itemC {
-            grid-column-start: 1;
-            grid-column-end: 6;
+            grid-column-start: 2;
+            grid-column-end: 9;
             grid-row-start: 1;
-            grid-row-end: 5;
+            grid-row-end: 9;
         }
+        
         #itemA {
-            grid-column-start: 6 ;
-            grid-row-start: 3;
-            grid-row-end: 5 ;
+            grid-column-start: 9;
+            grid-column-end: 13;
+            grid-row-start: 1;
+            grid-row-end: 3;
         }
         #itemB {
-            grid-column-start: 7 ;
+            grid-column-start: 9;
+            grid-column-end: 13;
             grid-row-start: 3;
-            grid-row-end: 5 ;
+            grid-row-end: 5;
         }
         #itemD {
-            grid-column-start: 2 ;
-            grid-row-start: 2;
-            grid-row-end: 4 ;
+            grid-column-start: 9;
+            grid-column-end: 13;
+            grid-row-start: 5;
+            grid-row-end: 7;
         }
         #itemE {
-            grid-column-start: 4 ;
-            grid-row-start: 2;
-            grid-row-end: 4 ;
+            grid-column-start: 9;
+            grid-column-end: 13;
+            grid-row-start: 7;
+            grid-row-end: 9;
         }
+
+        
 
     </style>
     
@@ -70,7 +72,7 @@
 
 <body>
 
-    <h1>1.h</h1>
+    <h1>1.m</h1>
 
     <div class="grid-container">
         <div id="itemA" class="grid-item">A</div>
@@ -78,9 +80,10 @@
         <div id="itemC" class="grid-item">C</div>
         <div id="itemD" class="grid-item">D</div>
         <div id="itemE" class="grid-item">E</div>
-        <div id="itemF" class="grid-item">F</div>
+        <!-- <div id="itemF" class="grid-item">F</div> -->
         <!-- <div id="itemG" class="grid-item">G</div> -->
         <div id="itemH" class="grid-item">H</div>
+        <!-- <div id="itemI" class="grid-item">I</div> -->
     </div>
 
 </body>
