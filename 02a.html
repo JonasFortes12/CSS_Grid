@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,57 @@
     <link rel="stylesheet" href="style02a.css">
     <title>Desktop</title>
 </head>
+
 <body>
-     
+
     <nav id="navbar" class="container-css-grid">
-        
+
         <div id="logo" class="container-css-grid">
             <img src="img/storm.svg" alt="">
             <h6 id="textlogo">STORM</h6>
         </div>
 
-        <a href=""><li>Home</li></a>
-        <a href=""><li>Quem Somos</li></a>
-        <a href=""><li>Serviços</li></a>
-        <a href=""><li>Contato</li></a>
+        <a class="button-modal" href="#abrirModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </a>
+
+        <a class="navs" href="">
+            <li>Home</li>
+        </a>
+        <a class="navs" href="">
+            <li>Quem Somos</li>
+        </a>
+        <a class="navs" href="">
+            <li>Serviços</li>
+        </a>
+        <a class="navs" href="">
+            <li>Contato</li>
+        </a>
     </nav>
+
+    <div id="abrirModal" class="modal">
+        <a href="">
+            <li>Home</li>
+        </a>
+        <a href="">
+            <li>Quem Somos</li>
+        </a>
+        <a href="">
+            <li>Serviços</li>
+        </a>
+        <a href="">
+            <li>Contato</li>
+        </a>
+
+        <a href="#fechar" title="Fechar" class="fechar">
+            <button class="button-modal-fechar">Fechar</button>
+        </a>
+
+    </div>
 
     <div class="container-css-grid" id="postagens">
 
@@ -41,10 +79,9 @@
 
     </div>
 
-    <div class="container-css-grid" id="intens-banner">
+    <div class="container-css-grid" id="itens-banner">
 
-        
-        <div class="container-css-grid" id="intens">
+        <div class="container-css-grid" id="itens">
             <img src="img/storm_img.jpg" alt="">
             <h6>item 1</h6>
             <img src="img/storm_img.jpg" alt="">
@@ -71,4 +108,5 @@
     </footer>
 
 </body>
+
 </html>

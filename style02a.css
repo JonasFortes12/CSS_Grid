@@ -5,7 +5,8 @@
     font-family: 'Raleway', sans-serif;
 
 }
-body{
+
+body {
     margin: 0;
 }
 
@@ -26,15 +27,17 @@ nav#navbar {
 nav#navbar li,
 nav#navbar a {
     list-style: none;
-    text-decoration: none;
+    text-decoration: solid;
+    font-style: normal;
+    font-weight: bold;
     color: black;
-    font-size: 90%;
+    font-size: 102%;
 }
+
 nav#navbar a :hover {
     list-style: none;
     text-decoration: none;
-    color: black;
-    font-size: 90%;
+    color: brown;
     font-weight: bolder;
 }
 
@@ -69,8 +72,8 @@ div#postagens {
 
 div#postagens-1,
 div#postagens-2,
-div#postagens-3{
-    grid-template-rows: 60% 20%;
+div#postagens-3 {
+    grid-template-rows: 60%;
 }
 
 div#postagens-1 img,
@@ -78,7 +81,7 @@ div#postagens-2 img,
 div#postagens-3 img {
     height: 100%;
     width: 100%;
-    align-content:flex-end ;
+    align-content: flex-end;
 
 }
 
@@ -88,56 +91,58 @@ div#postagens-3 h5 {
     grid-row-start: 2;
     text-align: center;
     align-self: center;
+    margin: 0%;
 }
 
 /* -----------------------ITENS e BANNER--------------------------- */
 
-div#intens-banner{
+div#itens-banner {
     grid-template-columns: auto 40%;
     grid-template-rows: auto;
     margin: 10%;
 }
 
 
-div#intens{
+div#itens {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 20%);
     column-gap: 5%;
     row-gap: 5%;
-    
+
 }
 
-div#banner{
+div#banner {
     grid-template-columns: auto;
-    grid-template-rows: 65% 15%;
+    grid-template-rows: 65%;
 }
 
-div#intens img{
+div#itens img {
     height: 100%;
     width: 100%;
 }
 
-div#intens h6{
+
+div#banner img {
+    height: 100%;
+    width: 100%;
+}
+
+div#itens h6 {
     text-align: left;
     align-self: center;
 }
 
-
-div#banner img{
-    height: 100%;
-    width: 100%;
-}
-
-div#banner h6{
+div#banner h6 {
     text-align: center;
     align-self: center;
+    margin: 0%;
 }
 
 
 /* -----------------------FOOTER-------------------------- */
 
 
-.footer{
+.footer {
     text-align: center;
     align-items: center;
     background-color: rgb(243, 246, 202);
@@ -145,13 +150,118 @@ div#banner h6{
     font-size: xx-small;
 }
 
+a.button-modal {
+    display: none;
+}
+
+div.modal {
+    display: none;
+}
 
 
 
+/* --------------------------Media Query------------------------- */
+
+@media (max-width: 415px) {
+
+    div#postagens {
+        grid-template-columns: repeat(1, 80%);
+        grid-template-rows: repeat(2, auto);
+        justify-content: center;
+        row-gap: 4%;
+
+        column-gap: 5%;
+        margin: 10%;
+    }
+
+    div#itens-banner {
+        grid-template-columns: auto;
+
+        margin-bottom: 10%;
+
+    }
+
+    div#itens {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+        column-gap: 5%;
+        row-gap: 2%;
+        margin-top: 30%;
+
+    }
+
+    div#banner {
+        grid-template-columns: auto;
+        grid-template-rows: 65%;
+        margin-top: 40%;
+    }
+
+    div#itens h6 {
+        text-align: left;
+        align-self: center;
+    }
 
 
 
+    nav#navbar a.navs {
+        display: none;
+    }
 
 
+    div.modal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 5% auto;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        row-gap: 5%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 99999;
+        opacity: 0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+    }
 
+    div.modal:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
+    button.button-modal-fechar {
+        font-size: 10px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 2%;
+        width: fit-content;
+    }
+
+    a.button-modal {
+        display: block;
+        font-size: small;
+        color: blue;
+        border: none;
+        cursor: pointer;
+        padding: 1%;
+        width: fit-content;
+        grid-column-start: 5;
+        margin-left: 31%;
+
+    }
+
+    div#abrirModal a{
+        list-style-type: none;
+        text-decoration-line: none;
+        color: aqua;
+    }
+
+}
